@@ -10,11 +10,11 @@
 	<link rel="icon" type="image/png" href="./favicon.png" />
 	<link href="./output.css" rel="stylesheet">
 </head>
-<body class="min-w-screen min-h-screen flex items-center justify-center bg-gray-50">
+<body class="min-w-screen min-h-screen flex items-center justify-center bg-gray-100">
 	<div id="wrapper" class="w-full max-w-[1280px] min-h-screen flex items-center justify-center p-8">
 
 		<div class="accordion w-full rounded-xl shadow">
-			<div class="accordion-item rounded-t-xl bg-white border-b border-gray-50">
+			<div class="accordion-item rounded-t-xl bg-white border-b border-gray-100">
 				<div class="accordion-header flex items-center justify-between p-8 hover:cursor-pointer">
 					<h3 class="text-lg font-semibold">1. accordion-header</h3>
 					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-gray-500">
@@ -27,7 +27,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="accordion-item bg-white border-b border-gray-50">
+			<div class="accordion-item bg-white border-b border-gray-100">
 				<div class="accordion-header flex items-center justify-between p-8 hover:cursor-pointer">
 					<h3 class="text-lg font-semibold">2. accordion-header</h3>
 					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-gray-500">
@@ -40,7 +40,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="accordion-item bg-white border-b border-gray-50">
+			<div class="accordion-item bg-white border-b border-gray-100">
 				<div class="accordion-header flex items-center justify-between p-8 hover:cursor-pointer">
 					<h3 class="text-lg font-semibold">3. accordion-header</h3>
 					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-gray-500">
@@ -53,7 +53,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="accordion-item rounded-b-xl bg-white border-b border-gray-50">
+			<div class="accordion-item rounded-b-xl bg-white border-b border-gray-100">
 				<div class="accordion-header flex items-center justify-between p-8 hover:cursor-pointer">
 					<h3 class="text-lg font-semibold">4. accordion-header</h3>
 					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-gray-500">
@@ -74,18 +74,18 @@
 		$(document).ready(function(){
 			$('.accordion-header').click(function(){
 				if ($(this).parent().find('.accordion-body').hasClass('hidden')) {
-					$('.accordion-item').removeClass('bg-white').addClass('bg-white/50')
+					$('.accordion-item').removeClass('bg-white').addClass('bg-gray-50')
 					$('.accordion-header').find('svg').removeClass('rotate-45 text-pink-700').addClass('text-gray-500');
 					$('.accordion-body').addClass('hidden').slideUp();
 					$(this).find('svg').addClass('rotate-45 duration-300 text-pink-700').removeClass('text-gray-500');
-					$(this).parent().removeClass('bg-white/50').addClass('bg-white')
+					$(this).parent().removeClass('bg-gray-50').addClass('bg-white')
 					$(this).parent().find('.accordion-body').slideDown(function(){
 						$(this).removeClass('hidden');
 					});
 				} else {
 					$(this).find('svg').removeClass('rotate-45 text-pink-700').addClass('text-gray-500');
 					$(this).parent().find('.accordion-body').addClass('hidden').slideUp();
-					$('.accordion-item').removeClass('bg-white/50').addClass('bg-white');
+					$('.accordion-item').removeClass('bg-gray-50').addClass('bg-white');
 				}
 			})
 		});
